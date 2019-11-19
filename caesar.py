@@ -11,9 +11,8 @@ def encrypt():
     original = []
     with open("secret.txt", "r") as file:
         for letter in file.read():
-            if letter in alphabet:
+            if letter.lower() in alphabet:
                 index = alphabet.index(letter.lower())
-                original.append(index)
                 cipher_numbers = (index + 3) % 26
                 encrypted.append(cipher_numbers)
     for i in range(len(encrypted)):
