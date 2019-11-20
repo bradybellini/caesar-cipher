@@ -8,7 +8,6 @@ cipher = []
 
 def encrypt():
     encrypted = []
-    original = []
     with open("secret.txt", "r") as file:
         for letter in file.read():
             if letter.lower() in alphabet:
